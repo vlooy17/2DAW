@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style>
+        table{
+            border: 1px solid black;
+        }
+        tr{
+            border: 1px solid black;
+        }
+        td{
+            border: 1px solid black;
+        }
+    </style>
+    <script type="text/javascript">
+
+        var col = prompt("Numeros de columnas");
+       while(col<9){
+        col = prompt("Numeros de columnas mayor o igual que 10");
+       }
+        var fil = prompt("Números de fila");
+        while(fil>21){
+        fil = prompt("Numeros de filas menor o igual 20");
+       }
+        var x = col * fil;
+        cont=0;
+
+        document.write("<table>")
+        document.write("<tr>")
+        for (let i = 1; i < x+1; i++) {
+            
+            if(cont==fil){
+                document.write("</tr><tr>");
+                cont=0;
+
+            }
+            document.write("<td>" + i + "</td>");
+            cont++;
+        }
+        document.write("</tr>");
+        document.write("</table>")
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

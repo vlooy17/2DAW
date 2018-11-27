@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<meta charset="utf-8">
+<script type="text/javascript">
+	var cantidad=3;
+	var ar=[];
+	while(ar.length <cantidad){
+		var ale = Math.ceil(Math.random()*99);
+		var rep = false;
+		for (var i = 0; i < ar.length; i++) {
+			if (ar[i] == ale) {
+				rep=true;
+				break;
+			}
+			
+		}
+		if(!rep){
+			ar[ar.length]=ale;
+		}
+	}
+	alert("numeros aleatorios "+ar)
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Alta Proveedores</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+  body{
+    background-color: white !important;
+  }
+  h2{
+    background-color: #245658 !important;
+    margin-top: 0%;
+    color: white;
+    height: 70px;
+    padding-top:15px;
+    padding-left: 2%;
+
+  }
+  ::placeholder { color: #245658 !important;
+                  opacity: 0.60 !important; 
+  }
+  label{
+    color: #245658;
+    text-shadow: 1;
+  }
+  input{
+    width: 50% !important;
+  }
+  button{
+    background-color: #245658 !important;
+    color: white !important;
+  }
+</style>
+
+<body>
+ <h2>Página de registro Proveedores</h2>
+<div class="container">
+ 
+  <form method="POST" action="insertarEx.php" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input required=""  type="text" pattern="[A-Za-z]{.30}" class="form-control" id="nombre" placeholder="Introduzca Nombre" name="nombre">
+    </div>
+    <div class="form-group">
+      <label for="cif">CIF:</label>
+      <input required="" pattern="([A-Z]{1}[0-9]{8})" type="text" class="form-control" id="cif" placeholder="Introduzca el CIF" name="cif">
+    </div>
+    <div class="form-group">
+      <label for="contacto">Persona Contacto:</label>
+      <input required="" type="text" class="form-control" id="contacto" placeholder="Introduzca un contacto" name="contacto">
+    </div>
+    <div class="form-group">
+      <label for="clave">Clave:</label>
+      <input required="" type="password" class="form-control" id="clave" placeholder="Introduzca la clave" name="clave">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input required="" type="email" class="form-control" id="email" placeholder="Introduzca email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="telefono">Teléfono:</label>
+      <input required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,}" type="number" class="form-control" id="telefono" placeholder="Introduzca telefono" name="telefono">
+    </div>
+    <button type="submit" class="btn btn-default">Registrarme</button>
+  </form>
+  <div style="float: right; position: fixed;margin-top: -55%; margin-left: 50%;height: auto; width: 35%;">
+    <img src="imagenes/welcome.png" style="height: auto; width: 100%;">
+  </div>
+</div>
+</body>
+</html>

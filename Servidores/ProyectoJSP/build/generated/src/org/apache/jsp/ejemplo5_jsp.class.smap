@@ -1,0 +1,26 @@
+SMAP
+ejemplo5_jsp.java
+JSP
+*S JSP
+*F
++ 0 ejemplo5.jsp
+ejemplo5.jsp
++ 1 FormuColores.jsp
+FormuColores.jsp
++ 2 FormuColoresConAviso.jsp
+FormuColoresConAviso.jsp
+*L
+5,11:50
+17,5:63
+21,2:68
+5#1,26:70
+22#0,3:95
+25:98,3
+26:101
+5#2,14:102
+26#0,2:115
+28,2:117,3
+30:123
+31,3:124,3
+34,3:133
+*E

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javaScript">
+        function oculta() {
+            var x = document.getElementById("nombre");
+            x.style.display='none';
+        }
+        function muestra() {
+            var x = document.getElementById("nombre");
+            x.style.display='inline';
+        }
+
+    </script>
+</head>
+<body>
+   <form>
+        <input type="text" id="nombre" value="OCULTAME PULSANDO EL BOTON" style="width: 282px">
+         
+   </form>
+   <button onclick="oculta()">OCULTAME</button>
+   <button onclick="muestra()">MUESTRAME</button>
+</body>
+</html>

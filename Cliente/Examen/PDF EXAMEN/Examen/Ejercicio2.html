@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript">
+
+        var pal = prompt("Introduzca una palabra o una frase");
+        var Correcto = true;
+        var Correcto1 = true;
+        var cont = 0;
+        var x = 0;
+        if (pal.length == 0) {
+            while (Correcto) {
+                Correcto = true;
+                pal = prompt("Introduzca una palabra o una frase correcta");
+                if (pal.length != 0) {
+                    Correcto = false;
+                }
+            }
+
+        } else {
+            var cad = prompt("Introduzca cadena a buscar");
+            while (cad.length == 0) {
+                cad = prompt("Introduzca cadena a buscar correcta");
+            }
+        }
+        pal = pal.toLowerCase();
+        cad = cad.toLowerCase();
+
+        while (pal.search(cad) > -1) {
+
+            cont++;
+            pal = pal.replace(cad, "");
+
+        }
+        alert("La cadena " + cad + " se repite " + cont);
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

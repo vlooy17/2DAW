@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindromoooo</title>
+</head>
+<script type="text/javascript">
+	var palabra =	prompt("Introduzca una palabra");
+	var palindromo="";
+	var c;
+	palabra = palabra.replace(/ /g,"");
+
+	for (var i = palabra.length; i >= 0; i--) {
+		c = palabra.charAt(i);
+		palindromo = palindromo + c;
+	}
+
+
+	alert(palindromo);
+	alert(palabra);
+	if (palabra == palindromo) {
+		alert("Es un palindromo");
+	}else{
+		alert("no es un palindromo");
+	}
+</script>
+<body>
+
+</body>
+</html>

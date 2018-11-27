@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            h1{
+                text-align: center;
+
+            }
+            h2{
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form method="post" action="/VanlooyCala/Comprobacion">
+        <h1>Encuesta privada</h1>
+        <h2>Rellena los datos indicados y pulsa Enviar</h2>
+
+        <table>
+            <tr>
+                <td> Introduce tu nombre:</td>
+                <td><input type="text" name="nombre" value=""  required/></td>
+            </tr>
+            <tr>
+                <td>Introduce tus apellidos:</td>
+                <td><input type="text" name="apellidos" value="" required/></td>
+            </tr>
+            <tr>
+                <td>Teclea tu numero de telefono:</td>
+                <td><input type="number" max="999999999" name="numero" value="" required/></td>
+            </tr>
+            <tr>
+                <td>Indica tu ciudad de nacimiento:</td>
+                <td><input type="text" name="ciudad" value="" required/></td>
+            </tr>
+            <tr>
+                <td>Sexo</td> <td>Hombre<input type="radio" name="sexo" value="hombre" required/>  </td> 
+                <td>Mujer<input type="radio" name="sexo" value="mujer" required/></td>
+            </tr>
+            <tr>
+                <td>   Seleciona tu pais de origen</td>
+                <td><select name="pais" required>
+                        <option>España</option>
+                        <option>Argentina</option>
+                        <option>Francia</option>
+                        <option>China</option>
+                        <option>Portugal</option>
+                    </select></td>
+
+            </tr>
+        </table>
+        <h3>Selecciona tus actividades de ocio favoritas</h3>
+
+        <input type="checkbox" name="parapente" value="PARAPENTE" />PARAPENTE</br>
+        <input type="checkbox" name="alaDelta" value="ALADELTA" />ALA DELTA</br>
+        <input type="checkbox" name="esqui" value="ESQUI" /> ESQUI</br>
+        <input type="checkbox" name="submarinismo" value="SUBMARINISMO" /> SUBMARINISMO</br>
+        
+        <h3>Comentarios sobre la página</h3>
+        <textarea name="comentarios" rows="8" cols="60">
+        </textarea>
+        </br>
+        <input type="submit" value="Enviar encuesta" name="enviar" />
+        </br>
+        <input type="reset" value="Borrar Datos" name="borrar" />
+        </form>
+    </body>
+</html>

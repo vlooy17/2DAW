@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contactanos</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <link href="contactanos.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+  <form class="contact_form" action="insertDuda.php" method="get">
+
+    <ul>
+
+     <li>
+
+      <h2>Contactanos</h2>
+
+    </li>
+
+    <li>
+
+     <label for="name">Nombre:</label>
+
+     <input type="text"  placeholder="Johan Ricardo" required />
+
+   </li>
+
+   <li>
+
+     <label for="email">Email:</label>
+
+     <input type="email" name="email" placeholder="jricardo@ejemplo.com" required />
+
+   </li>
+
+
+   <li>
+
+     <label for="Mensaje">Mensaje:</label>
+
+     <textarea name="mensaje" cols="40" rows="6" required ></textarea>
+
+   </li>
+
+    <script>
+      var long=0;
+      var lat=0;
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      }
+      
+      function showPosition(position) {
+        long=position.coords.longitude;
+        document.getElementById('long').value=long;
+
+        lat=position.coords.latitude;
+        document.getElementById('lat').value=lat;
+      }
+
+     
+    </script>
+
+    <input type='text' name='long' id='long' />
+    <input type='text' name='lat' id='lat' />
+
+   <li>
+
+    <button class="submit" type="submit">Enviar</button>
+
+  </li>
+
+</ul>
+
+</form>
+
+</div>
+
+
+
+</body>
+</html>

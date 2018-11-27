@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javaScript">
+
+
+        function Redirec() {
+            var x = document.getElementById("nombre");
+            var y = document.getElementById("cdpjosecabrera");
+            //x.value = x.value.toUpperCase();
+            
+            alert("Usted: "+x.value+" es redireccionado a "+y.action);
+        }
+
+    </script>
+</head>
+<body>
+   <form value="cdpjosecabrera" id="cdpjosecabrera" action="http://cdpjosecabrera.es/moodle/my/">
+        Escriba aqui <input type="text" id="nombre" onblur="Mayuscula()">
+        <input type="submit" onclick="Redirec()">    
+   </form>
+</body>
+</html>

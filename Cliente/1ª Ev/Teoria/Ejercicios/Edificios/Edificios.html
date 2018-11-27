@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript">
+        function Edificio(calle, numero, codigoPostal,plantas) {
+            this.calle = calle;
+            this.numero = numero;
+            this.codigoPostal = codigoPostal;
+            this.plantas = plantas;
+            this.edificio= new Array();
+            document.write("Construido nuevo edificio en calle: " + this.calle + ", nº: " + this.numero + ", CP:" + this.codigoPostal);
+            document.write("<br>");
+            this.modificaNumero = function ModificaNumero(nuevoNumero) {
+
+                this.numero = nuevoNumero;
+                document.write("Nuevo numero del edificio A es "+ this.numero );
+
+            }
+            this.modificaCP = function ModificaCP(NuevoCodigo) {
+
+                this.codigoPostal = NuevoCodigo;
+                document.write("<br>");
+                document.write("El nuevo código postal del edificio B es:" + this.codigoPostal);
+
+
+            }
+            this.imprimeCalle = function imprimeCalle() {
+
+                document.write("<br>");
+                document.write("La Calle del edificio C es " + this.calle);
+
+            }
+            this.imprimeNumero = function imprimeNumero() {
+
+                document.write("<br>");
+                document.write("EL numero del edificio C es " + this.numero);
+
+            }
+            this.imprimeCodigo = function imprimeCodigo() {
+
+                document.write("<br>");
+                document.write("El codigo postal del edificio C es " + this.codigoPostal);
+
+            }
+            this.agregarPlantas = function(numplantas,numpuertas){
+                if(this.edificio.length==0){
+                    for (let i= 0; i < numplantas,numpuertas; i++) {
+                       this.edificio[i]=new Array();
+                        for(var x=0;x<numpuertas;x++){
+                            this.edificio[i].push("");
+                        }
+                    }
+                }else{
+                    for(var i = 0;i<numplantas;i++){
+                        this.edificio[this.edificio.length]= new Array();
+                        for (var x = 0;  x<numpuertas; x++) {
+                            this.edifico[this.edificio.length-1].push("");
+                                
+                        }
+                    }
+                }
+            }
+            this.pintarPlantas = function(){
+                for(var i =0; i<this.edificio.length;i++){
+                    for(var z=0;z<this.edificio.length[i].length;z++){
+                        document.write("Planta"+this.edificio[i]+this.edificio[i][z]);
+                        document.write("<br>");
+                    }
+                }
+            }
+        }
+
+        var edificioA = new Edificio("García Prieto", "58", 15706);
+        var edificioB = new Edificio("Camino Caneiro", "29", 32004);
+        var edificioC = new Edificio("San Clemente", "s/n", 15705);
+
+        edificioA.modificaNumero("77");
+
+        edificioB.modificaCP(11560);
+
+        edificioC.imprimeCalle();
+        edificioC.imprimeNumero();
+        edificioC.imprimeCodigo();
+
+        edificioA.agregarPlantas(1,1);
+        edificioA.agregarPlantas(1,2);
+        edificioA.agregarPlantas(1,3);
+        edificioA.agregarPlantas(1,4);
+        edificioA.agregarPlantas(2,1);
+        edificioA.agregarPlantas(2,2);
+
+       // edificioB.agregarPlantas(2.1);
+
+       // edificioA.pintarPlantas();
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

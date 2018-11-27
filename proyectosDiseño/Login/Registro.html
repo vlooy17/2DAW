@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Página de regristo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+  body{
+    background-color: white !important;
+  }
+  h2{
+    background-color: #245658 !important;
+    margin-top: 0%;
+    color: white;
+    height: 70px;
+    padding-top:15px;
+    padding-left: 2%;
+
+  }
+  ::placeholder { color: #245658 !important;
+                  opacity: 0.60 !important; 
+  }
+  label{
+    color: #245658;
+    text-shadow: 1;
+  }
+  input{
+    width: 50% !important;
+  }
+  button{
+    background-color: #245658 !important;
+    color: white !important;
+  }
+</style>
+
+<body>
+ <h2>Página de registro</h2>
+<div class="container">
+ 
+  <form method="POST" action="insertar.php" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" class="form-control" id="nombre" placeholder="Introduzca Nombre" name="nombre">
+    </div>
+    <div class="form-group">
+      <label for="apellido1">Primer Apellido:</label>
+      <input type="text" class="form-control" id="apellido1" placeholder="Introduzca primer apellido" name="apellido1">
+    </div>
+    <div class="form-group">
+      <label for="apellido2">Segundo Apellido:</label>
+      <input type="text" class="form-control" id="apellido2" placeholder="Introduzca el segundo apellido" name="apellido2">
+    </div>
+    <div class="form-group">
+      <label for="nick">Nick:</label>
+      <input type="text" class="form-control" id="nick" placeholder="Introduzca un nick" name="nick">
+    </div>
+    <div class="form-group">
+      <label for="clave">Clave:</label>
+      <input type="text" class="form-control" id="clave" placeholder="Introduzca la clave" name="clave">
+    </div>
+    <div class="form-group">
+      <label for="clave2">Repita Clave:</label>
+      <input type="text" class="form-control" id="clave2" placeholder="Introduzca la clave otra vez" name="clave2">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Introduzca email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="domicilio">Domicilio:</label>
+      <input type="text" class="form-control" id="domicilio" placeholder="Introduzca domicilio" name="domicilio">
+    </div>
+    <div class="form-group">
+      <label for="poblacion">Poblacion:</label>
+      <input type="text" class="form-control" id="poblacion" placeholder="Introduzca poblacion" name="poblacion">
+    </div>
+    <div class="form-group">
+      <label for="provincia">Provincia:</label>
+      <input type="text" class="form-control" id="provincia" placeholder="Introduzca provincia" name="provincia">
+    </div>
+    <div class="form-group">
+      <label for="dni">DNI/NIF:</label>
+      <input type="text" class="form-control" id="dni" placeholder="Introduzca DNI/NIF" name="dni">
+    </div>
+    <div class="form-group">
+      <label for="telefono">Teléfono:</label>
+      <input type="number" class="form-control" id="telefono" placeholder="Introduzca telefono" name="telefono">
+    </div>
+    <div>
+      <label for="foto" >Introduzca su fotografía</label><br>
+      <input type="file" id="fileToUpload" name="fileToUpload"  ><br>
+    </div>
+    <button type="submit" class="btn btn-default">Registrarme</button>
+  </form>
+  <div style="float: right; position: fixed;margin-top: -55%; margin-left: 50%;height: auto; width: 35%;">
+    <img src="imagenes/welcome.png" style="height: auto; width: 100%;">
+  </div>
+</div>
+</body>
+</html>

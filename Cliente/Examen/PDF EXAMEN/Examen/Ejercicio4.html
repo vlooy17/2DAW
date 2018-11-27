@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cronometro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript">
+        var iniciado = 0;
+        var cronometro = 0;
+        var fecha_actual_inicio = "";
+        var fecha_actual = "";
+        function empezar() {
+            if (iniciado == 0) {
+
+                fecha_actual_inicio = new Date();
+                crono_en_marcha = setInterval(tiempo, 10);
+                iniciado = 1;
+            }
+        }
+        function Reiniciar() {
+            if (iniciado == 0) {
+                visor = document.getElementById("reloj");
+                visor.innerHTML = "0: 00 : 00 : 00";
+
+            }
+        }
+        function Continuar() {
+            if (iniciado == 0) {
+                crono_en_marcha = setInterval(tiempo, 10);
+                iniciado = 1;
+            }
+        }
+        function tiempo() {
+
+             fecha_actual = new Date().getTime();
+            var valor_cronometro = new Date(fecha_actual - fecha_actual_inicio);
+            ms = valor_cronometro.getMilliseconds();
+            cronometro = ms;
+            ds = ms / 100;
+            decimas_segundo = Math.round(ds);
+
+            segundo = valor_cronometro.getSeconds();
+            minutos = valor_cronometro.getMinutes();
+            horas = valor_cronometro.getHours() - 1;
+
+
+            if (decimas_segundo < 10) {
+
+                decimas_segundo = "0" + decimas_segundo;
+
+            }
+            if (segundo < 10) { segundo = "0" + segundo; }
+            if (minutos < 10) { minutos = "0" + minutos; }
+
+            visor = document.getElementById("reloj");
+            visor.innerHTML = horas + " : " + minutos + " : " + segundo + " : " + decimas_segundo;
+        }
+
+        function parar() {
+            if (iniciado = 1) {
+                clearInterval(crono_en_marcha);
+                iniciado = 0;
+                fecha_actual_inicio = fecha_actual;
+            }
+
+        }
+    </script>
+    <style type="text/css">
+        * {
+            margin: auto;
+            padding: 0
+        }
+
+        h1 {
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        #cronometro {
+            padding: 10px;
+            border: 3px blue double;
+            width: 200px;
+            text-align: center;
+
+        }
+
+        #reloj {
+            padding: 5px 10px;
+            width: 170px;
+            border: 1px solid black;
+            font: bold 1.5em digital, europa, arial;
+            text-align: center;
+            margin: 4px
+        }
+
+        #cronometro [type=button] {
+            margin: 4px;
+            font: normal 9pt arial;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Cronometro</h1>
+    <div id="cronometro">
+        <div id="reloj"> 0: 00 : 00 : 00</div>
+
+        <form name="crono" action="#">
+            <input type="button" value="Empezar" name="empieza" onclick="empezar()" ;>
+            <input type="button" value="Parar" name="para" onclick="parar()" ;>
+            <input type="button" value="Continuar" name="continua" onclick="Continuar()" ;>
+            <input type="button" value="Reiniciar" name="reinicia" onclick="Reiniciar()" ;>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

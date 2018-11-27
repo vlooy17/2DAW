@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 1</title>
+</head>
+<meta charset="utf-8">
+<body>
+	<script type="text/javascript">
+		
+		var valores = [true,5,false,"hola","adios",2];
+
+		var texto1 = valores[3];
+		var texto2 = valores[4];
+		var bo = [];
+		var nu = [];
+		var cont = 0;
+		var cont1 = 0;
+
+		if (texto1.lenght>texto2.lenght) {
+			document.write("El texto "+texto1+" es más grande");
+		}else{
+			document.write("El texto "+texto2+" es más grande");
+		}
+
+
+		for (var i = 0; i < valores.length; i++) {
+
+			if (typeof valores[i] == "boolean") {
+
+				bo[cont] = valores [i];
+
+				cont++;
+			}
+		}
+
+		document.write("<br/>");
+		document.write("<br/>");
+		document.write(bo[0]&&bo[1]);
+		document.write("<br/>");
+		document.write(bo[0]||bo[1]);
+		document.write("<br/>");
+
+
+
+		for (var i = 0; i < valores.length; i++) {
+			
+
+			if (typeof valores[i] == "number") {
+
+				nu[cont1] = valores [i];
+				cont1++;
+			}
+			
+
+		}
+
+		document.write("<br/>");
+		document.write("La suma es "+(nu[0]+nu[1]));
+		document.write("<br/>");
+		document.write("La resta es "+(nu[0]-nu[1]));
+		document.write("<br/>");
+		document.write("La multiplicación es "+(nu[0]*nu[1]));
+		document.write("<br/>");
+		document.write("La división es "+(nu[0]/nu[1]));
+		document.write("<br/>");
+		document.write("El modulo es "+(nu[0]%nu[1]));
+
+
+
+
+
+	</script>
+
+</body>
+</html>

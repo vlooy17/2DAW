@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javaScript">
+
+
+        function Cambia1() {
+            var x = document.getElementById("web");
+            x.innerHTML="Interfaces WEB";
+        }
+        function Cambia2() {
+            var x = document.getElementById("empresas");
+            x.innerHTML="Empresas";
+        }
+        function Cambia3() {
+            var x = document.getElementById("cliente");
+            x.innerHTML="Desarrollo web Entorno Cliente";
+        }
+        function Cambia4() {
+            var x = document.getElementById("servidores");
+            x.innerHTML="Desarrollo web Entorno Servidores";
+        }
+        function Cambia5() {
+            var x = document.getElementById("hlc");
+            x.innerHTML="Hora Libre Configuracion";
+        }
+
+    </script>
+</head>
+<body>
+   <form>
+        <p id="web" ondblclick="Cambia1()" >IW</p>
+        <p id="empresas" ondblclick="Cambia2()" >EIE</p>
+        <p id="cliente" ondblclick="Cambia3()" >DC</p>
+        <p id="servidores" ondblclick="Cambia4()" >DS</p>
+        <p id="hlc" ondblclick="Cambia5()" >HLC</p>
+       
+         
+   </form>
+</body>
+</html>

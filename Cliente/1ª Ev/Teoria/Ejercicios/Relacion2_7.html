@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fecha</title>
+</head>
+<script type="text/javascript">
+	var meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+	var dias = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"]
+	var d = new Date();
+	var m=d.getMonth();
+	var di = d.getDay();
+	alert("Hoy es "+dias[di]+", "+d.getDate()+" de "+meses[m]+ " de "+d.getFullYear()+" y son las "+d.getHours()+":"+d.getMinutes()+" horas");
+</script>
+<body>
+
+</body>
+</html>

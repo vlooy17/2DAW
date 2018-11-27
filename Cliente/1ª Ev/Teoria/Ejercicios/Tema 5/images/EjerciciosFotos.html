@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javaScript">
+        function Ventana(img) {
+            var x = img.src;
+            document.getElementById("imgAmpliada").src=x;
+            
+        }
+
+    </script>
+</head>
+<body>
+     <img src="31.jpg" style="width: 14%; height: 150px;" onmousemove="Ventana(this)">
+     <img src="32.jpg" style="width: 14%; height: 150px;" onmousemove="Ventana(this)">
+     <img src="33.jpg" style="width: 14%; height: 150px;" onmousemove="Ventana(this)">
+     <img src="34.jpg" style="width: 14%; height: 150px;" onmousemove="Ventana(this)">
+     <img src="35.jpg" style="width: 14%; height: 150px;" onmousemove="Ventana(this)">
+     <img src="36.jpg" style="width: 14%; height: 150px;" onmousemove="Ventana(this)">
+     <img src="37.jpg" style="width: 14%; height: 150px;" onmousemove="Ventana(this)">
+
+     <div>
+         <img id="imgAmpliada" src="">
+     </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo Básico e JavaScript</title>
+</head>
+<meta charset="utf-8">
+<body>
+<h2>Código fuente de un ejemplo básico con JavaScript</h2>
+<script type="text/javascript">
+	//Definimos variables.
+	var nombre,apellidos,edad,hermanos;
+
+	nombre = "Rafa";
+	apellidos = "Martinex Díaz";
+	edad=38;
+	hermanos=3;
+
+	//imprimo el nombre y los apellidos.
+	document.write("Hola "+nombre+" "+apellidos);
+
+	//imprimo un salto de línea+
+	document.write("<br/>");
+
+	//imprime la edad y el número de hermanos.
+	document.write(nombre + " tiene "+edad+" años y además tienes "+hermanos+"hermanos.<br/> ");
+
+	//Fíjate en la diferencia entre las dos siguientes lineas.
+	document.write("Dentro de 15 años tu edad será "+edad+15+".<br/>");
+	document.write("Dentro de 15 años tu edad será "+(edad+15)+".<br/>");
+
+	//Tu nombre escrito 50 eces
+	for ( i = 0; i <= 50; i++) {
+		document.write(nombre+",");
+	}
+
+
+</script>
+
+
+</body>
+</html>

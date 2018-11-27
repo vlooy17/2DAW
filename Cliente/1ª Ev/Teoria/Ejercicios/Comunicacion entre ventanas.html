@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ventanas</title>
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<script type="text/javascript">
+var nuevaVentana;
+	function inicializar(){
+
+		nuevaVentana = window.open("","ventana1","height=400,width=800");
+		document.getElementById("crear-ventana").onclick=crearNueva;
+		document.getElementById("cerrar-ventana").onclick=cerrarNueva;
+
+
+	}
+
+	
+	function cerrarNueva(){
+		if (nuevaVentana){
+			
+				nuevaVentana.close(); nuevaVentana = null;
+			
+		}
+		else{
+				alert("Ninguna ventana abierta");
+			}
+	}
+
+</script>
+</head>
+<body onLoad="inicializar()">
+<h1>Comunicación entre ventanas</h1>
+<form>
+	<p>
+		<label for="url"></label>
+        <input type="text" class="form-control" id="url" placeholder="Introduzca URL" name="nombrurl">
+		<input type="button" id="crear-ventana" value="Mostrar url en pantalla secundaria" onclick="window.open(getElementById('url').value,'ventana1','height=400,width=800');">
+		
+
+	</p>
+</form>
+</body>
+</html>

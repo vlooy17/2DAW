@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dni</title>
+</head>
+<meta charset="utf-8">
+<body>
+	<script type="text/javascript">
+		
+		var letras = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E','T'];
+		var dni;
+		dni=prompt('Ingrese dni:(SOLO NÚMEROS)');
+
+		
+		var numeros = parseInt(dni);
+		 alert (numeros);
+
+
+		if(numeros>0 && numeros<99999999){
+			var letra = prompt("Ingrese la letra:")
+			letra = letra.toUpperCase();
+			var comprobacion=0;
+			comprobacion = numeros%23;
+			var l = letras[comprobacion];
+
+			if (letra==l) {
+				alert("DNI correcto");
+			} else{
+				alert("Letra incorrecta");
+			}
+
+
+
+		}else{
+			alert("DNI incorrecto");
+		}
+
+
+	</script>
+
+</body>
+</html>

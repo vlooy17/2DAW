@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Añadir metodo</title>
+    <script type="text/javascript">
+
+        Array.prototype.sin = function (n) {
+            var dev = new Array();
+
+            for (let i = 0; i < this.length; i++) {
+
+
+                if ((this[i]) != n) {
+                    dev.push(this[i]);
+
+                }
+
+            }
+
+            return dev;
+        }
+
+
+        var array1 = [1, 2, 3, 1, 5];
+        var filtrado = array1.sin(1);
+
+        alert("El array antiguo es (" + array1.length + ") el array1.sin(1) es igual (" + filtrado.length + ")");
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

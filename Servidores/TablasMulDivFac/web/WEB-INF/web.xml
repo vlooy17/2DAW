@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Comprobar</servlet-name>
+        <servlet-class>Operaciones.Comprobar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Multiplica</servlet-name>
+        <servlet-class>Operaciones.Multiplica</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>div</servlet-name>
+        <servlet-class>Operaciones.div</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>factorial</servlet-name>
+        <servlet-class>Operaciones.factorial</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Comprobar</servlet-name>
+        <url-pattern>/Comprobar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Multiplica</servlet-name>
+        <url-pattern>/Multiplica</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>div</servlet-name>
+        <url-pattern>/div</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>factorial</servlet-name>
+        <url-pattern>/factorial</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

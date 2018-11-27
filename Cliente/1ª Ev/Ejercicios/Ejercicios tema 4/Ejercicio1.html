@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript">
+
+        function Coche(codigo, marca, precio) {
+            this.codigo = codigo;
+            this.marca = marca;
+            this.precio = precio;
+            this.imprime = function imprimeDato() {
+
+                return("El coches es " + this.marca + " con codigo " + this.codigo + " y cuesta " + this.precio);
+ 
+            }
+        }
+
+
+
+        var cocheDeVanlooy = new Coche("1230", "Seat Arona", "15742");
+
+        document.write(cocheDeVanlooy.imprime());
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

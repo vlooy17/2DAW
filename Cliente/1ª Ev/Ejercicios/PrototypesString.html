@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript">
+
+        String.prototype.truncar = function (tam, re) {
+
+            var cadena = " ";
+
+            if (this.length > tam) {
+
+
+
+                if (re == null) {
+                    v1 = true;
+                    cadena = this.substring(0, tam);
+
+                } else if (tam > (re.length)) {
+
+                    v2 = true;
+                    cadena = this.substring(0, (tam - re.length));
+
+                    cadena = cadena + re;
+                } else {
+                    alert("El tamaño de sustitucion es mas grande que el tamaño truncado")
+                }
+
+
+
+            } else {
+                alert("El tamaño de truncar es mas grande");
+            }
+
+            return cadena;
+        }
+        var cad = "Hola Mundo";
+        var cad1 = cad.truncar(6);
+        var cad2 = cad.truncar(6, "...");
+
+        alert("Con un parametro cadena = " + cad1 + " Con dos paramteros cadena = " + cad2);
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

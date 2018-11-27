@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guiones</title>
+</head>
+<script type="text/javascript">
+	var palabra =	prompt("Introduzca una palabra");
+	var palindromo="";
+	var c;
+
+	for (var i = 0; i <= palabra.length; i++) {
+		c = palabra.charAt(i);
+		if (i<(palabra.length-1)) {
+			palindromo = palindromo + c+"-";
+		}else{
+			palindromo = palindromo + c;
+		}
+		
+	}
+	
+
+	alert(palindromo);
+
+</script>
+<body>
+
+</body>
+</html>

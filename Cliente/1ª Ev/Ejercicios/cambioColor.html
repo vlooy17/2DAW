@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Ejemplo ayuda</title>
+	<script type="text/javascript">
+		
+
+		var numero=0;
+		var veces = 0;
+
+		
+
+		function cambiar(){
+			if(numero == 0){
+				document.bgColor="red";
+				numero = 1;
+
+			}else{
+				document.bgColor="blue";
+				numero = 0;
+
+			}
+			veces++;
+			if(veces<6){
+				activa_color = setTimeout("cambiar()",1000);
+			}
+			
+		
+		}
+
+
+	</script>
+</head>
+<body onload="cambiar()" bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+	<p>CAMBIO DE COLOR A AMARILLO</p>
+
+
+
+</body>
+</html>

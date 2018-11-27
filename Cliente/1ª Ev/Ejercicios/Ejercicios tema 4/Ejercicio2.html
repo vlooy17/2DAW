@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript">
+
+        function Articulo(codigo, marca, precio) {
+            this.codigo = codigo;
+            this.marca = marca;
+            this.precio = precio;
+            this.imprime = function imprimeDato() {
+
+                return("El coches es " + this.marca + " con codigo " + this.codigo + " y cuesta " + this.precio);
+ 
+            }
+        }
+
+
+
+       
+
+        var array = new Array();
+        var art0 = new Articulo("254", "Leche almendra prozis", "5");
+        var art1= new Articulo("255", "Claras prozis", "5");
+        var art2= new Articulo("256", " prozis", "5");
+        var art3 = new Articulo("257", "Shake prozis", "5");
+         array[0] = art0;
+         array[1] = art1;
+        array[2] = art2;
+         array[3] = art3;
+        
+        for (var index = 0; index < array.length; index++) {
+            document.write(array[index].imprime());
+            document.write("<br>");
+            
+        }
+        
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

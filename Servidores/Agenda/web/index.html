@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body style=" margin: 2%;font-family: sans-serif;" >
+        <form method="POST" >
+            <table cellspacing="10 !importan">
+                <tbody>
+                    <tr style=" margin: 1%">
+                        <td>Persona de contacto: </td>
+                        <td width="80"><input type="text" name="contaco" value="" /></td>
+                    </tr>
+                    <tr style=" margin: 1%">
+                        <td>Fecha: </td>
+                        <td><input type="date" name="fecha" value="" /></td>
+                    </tr>
+                    <tr style=" margin: 1%">
+                        <td>Teléfono:</td>
+                        <td><input type="number" name="telefono" min="100000000" max="999999999"/></td>
+                    </tr>
+                    <tr style=" margin: 1%">
+                        <td>Email:</td>
+                        <td><input type="email" name="email" value="" /></td>
+                    </tr>
+                    <tr style=" margin: 1%">
+                        <td>Prioridad</td>
+                        <td><input type="radio" name="prioridad" value="alta" />Alta</td>
+                        <td><input type="radio" name="prioridad" value="baja" />Baja</td>
+                    </tr>
+                    <tr style=" margin: 1%">
+                        <td><input type="reset" value="Borrar" name="borrar" /></td>
+                        <td><input type="submit" value="Agrega Cita" name="enviar"/></td>
+                        <td><a href="MuestraCarro.jsp"><button>Ver Agenda</button></a></td>
+                    </tr>
+                    <tr><td>Asunto</td></tr>
+                    <tr>
+                        <td><textarea name="asunto" rows="4" cols="20"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>

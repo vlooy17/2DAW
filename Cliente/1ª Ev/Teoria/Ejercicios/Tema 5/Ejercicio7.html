@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javaScript">
+
+
+        function Cambia1() {
+            var x = document.getElementById("boton");
+            x.style.background='red';
+            
+        }
+        function Cambia2() {
+            var x = document.getElementById("boton");
+            x.style.background='green';
+            
+        }
+        function Cambia3() {
+            var x = document.getElementById("boton");
+            x.style.background='blue';
+            
+        }
+
+    </script>
+</head>
+<body>
+   <form>
+        Rojo<input type="text" id="nombre" onmouseover="Cambia1()" style="background-color: red" >
+        Verde<input type="text" readonly id="campo1" onmouseover="Cambia2()" style="background-color: green" >
+        Azul<input type="text" readonly id="campo2" onmouseover="Cambia3()" style="background-color:blue">
+         <input id="boton"type="submit"value="¿Que Color?" style="color: white">
+   </form>
+</body>
+</html>

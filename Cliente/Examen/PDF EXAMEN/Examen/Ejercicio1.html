@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript">
+        var primo = false;
+        var div = 4;
+        var i = 2;
+
+        while (div < 101) {
+            i = 2;
+            while (div > i) {
+                if (div % i == 0) {
+                    document.write("No primo");
+                    primo = false;
+                }else{
+                    primo=true;
+                }
+                i++;
+            }
+            if(primo){
+                document.write(div);
+                document.write("<br>")
+            }
+
+            div++;
+        }
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

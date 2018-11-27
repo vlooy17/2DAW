@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript">
+
+        var frase = prompt("Introduzca una frase");
+        frase = frase.toLowerCase();
+        var c = "";
+        var primera = "";
+        var z = "";
+        var rev = "";
+        var rev2 = "";
+        var array2 = new Array();
+        var array1 = new Array();
+        var array3 = new Array();
+        var array2_ordenado = new Array();
+        cont = 0;
+        for (let i = 0; i < frase.length; i++) {
+            c = frase.charAt(i);
+            primera = frase.charAt(i);
+            z = z + primera;
+            if (c.indexOf(" ") > -1) {
+                cont++
+                array2.push(z);
+                z = " ";
+
+            }
+
+        }
+        cont++;
+
+        document.write("Numero de palabras: " + cont);
+        document.write("</br>");
+        array2.push(z);
+        z = " ";
+        for (let i = 0; i < frase.length; i++) {
+            primera = frase.charAt(i);
+            z = z + primera;
+            if (primera.indexOf(" ") > -1) {
+                break;
+
+            }
+
+        }
+        document.write("Primera palabra: " + z);
+        document.write("</br>");
+        var ult = array2.length - 1;
+        document.write("Ultima palabra: " + array2[ult]);
+        document.write("</br>");
+        array1 = array2.reverse();
+        document.write("El texto colocado del reves: ");
+        for (let i = 0; i < array2.length; i++) {
+            
+            if (i == array2.length - 1) {
+                document.write(array2[i]);
+            } else {
+                document.write(array2[i]+"-");
+            }
+
+
+        }
+        document.write("</br>");
+        array2_ordenado = array2.sort();
+        document.write("Texto ordenado de la a 'a' a la 'z'  ");
+        for (let i = 0; i < array2_ordenado.length; i++) {
+            document.write(array2[i]);
+            if (i == array2_ordenado.length - 1) {
+
+            } else {
+                document.write("-");
+            }
+
+
+        }
+        document.write("</br>");
+        document.write("Texto ordenado de la a 'z' a la 'a'  ");
+        array3 = array2.reverse();
+        for (let i = 0; i < array3.length; i++) {
+            document.write(array3[i]);
+            if (i == array3.length - 1) {
+
+            } else {
+                document.write("-");
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
