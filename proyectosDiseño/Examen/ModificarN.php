@@ -120,7 +120,7 @@ if(isset($_GET["Modificado"])){
     <div>
 				<label for="foto" >Introduzca su fotografía</label><br>
 				<input type="file" id="fileToUpload" name="fileToUpload" value="'.$row["Proveedor_Foto"].'"  ><br>
-				</div>
+		</div>
     <div style="float: right; position: fixed;margin-top: -55%; margin-left: 50%;height: auto; width: 35%;">
 				<img src="imagenes/'.$row["Proveedor_Foto"].'" style="height: auto; width: 100%;">
 				</div>

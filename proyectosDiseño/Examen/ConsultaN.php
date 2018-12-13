@@ -2,6 +2,9 @@
 
 session_start();
 
+
+	
+
 		$servername = "localhost";
 		$username = "id5448654_usuarios";
 		$password = "trebujena";
@@ -60,22 +63,24 @@ session_start();
     // output data of each row
 			
 			echo "<form method='POST' action='borrarN.php'>";
-			echo "<table style='border: solid black 2px;'>";
-			echo "<th style='border: solid black 2px;'>ID</th>";
-			echo "<th style='border: solid black 2px;'>Nombre</th>";
-			echo "<th style='border: solid black 2px;'>Direccion</th>";
-			echo "<th style='border: solid black 2px;'>CIF</th>";
-			echo "<th style='border: solid black 2px;'>Contacto</th>";
-			echo "<th style='border: solid black 2px;'>Telefono</th>";
-			echo "<th style='border: solid black 2px;'>URL</th>";
-			echo "<th style='border: solid black 2px;'>Longitud</th>";
-			echo "<th style='border: solid black 2px;'>Latitud</th>";
-			echo "<th style='border: solid black 2px;'>Clave</th>";
-			echo "<th style='border: solid black 2px;'>Email</th>";
-			echo "<th style='border: solid black 2px;'>Foto</th>";
-			echo "<th style='border: solid black 2px;'>Melodia</th>";
-			echo "<th style='border: solid black 2px;'>Borrar</th>";
-			echo "<th style='border: solid black 2px;'>Modificar</th>";
+			echo "<h1 style='  background-color: #245658 !important;margin-top: -1%;color: white;height: 70px;padding-top:10px;padding-left: 40px;margin-left:-2.5%;font-family:Arial;margin-right:-5%;'>CONSULTA DE PROVEEDORES</h1>";
+			echo "<table style='border: solid white 2px; color:#245658;'>";
+			echo "<th style='border: solid white 2px;'>ID</th>";
+			echo "<th style='border: solid white 2px;'>Nombre</th>";
+			echo "<th style='border: solid white 2px;'>Direccion</th>";
+			echo "<th style='border: solid white 2px;'>CIF</th>";
+			echo "<th style='border: solid white 2px;'>Contacto</th>";
+			echo "<th style='border: solid white 2px;'>Telefono</th>";
+			echo "<th style='border: solid white 2px;'>URL</th>";
+			echo "<th style='border: solid white 2px;'>Longitud</th>";
+			echo "<th style='border: solid white 2px;'>Latitud</th>";
+			echo "<th style='border: solid white 2px;'>Clave</th>";
+			echo "<th style='border: solid white 2px;'>Email</th>";
+			echo "<th style='border: solid white 2px;'>Foto</th>";
+			echo "<th style='border: solid white 2px;'>Melodia</th>";
+			echo "<th style='border: solid white 2px;'>Borrar</th>";
+			echo "<th style='border: solid white 2px;'>Modificar</th>";
+			echo "<th style='border: solid white 2px;'>Incidencias</th>";
 
 
 
@@ -83,21 +88,22 @@ session_start();
 
 			while($row = mysqli_fetch_assoc($rs)) {
 				echo "<tr>";
-				echo "<td style='border: solid black 2px;'>" . $row["Proveedor_ID"]. "</td>";
-				echo "<td style='border: solid black 2px;'>" .  $row["Proveedor_Nombre"]. "</td>";
-				echo "<td style='border: solid black 2px;'>" . $row["Proveedor_Direccion"]. "</td>";
-				echo "<td style='border: solid black 2px;'>" . $row["Proveedor_CIF"]. "</td>";
-				echo "<td style='border: solid black 2px;'>" . $row["Proveedor_Persona_Contacto"]. "</td>";
-				echo "<td style='border: solid black 2px;'>" . $row["Proveedor_Telefono"]. "</td>";
-				echo "<td style='border: solid black 2px;'>" . $row["Proveedor_URL"]. "</td>";
-				echo "<td style='border: solid black 2px;'>" . $row["Proveedor_Longitud"]. "</td>";
-				echo "<td style='border: solid black 2px;'>" . $row["Proveedor_Latitud"]. "</td>";
-				echo "<td style='border: solid black 2px;'>" . $row["Proveedor_clave"]. "</td>";
-				echo "<td style='border: solid black 2px;'>" . $row["Proveedor_Email"]. "</td>";
-				echo "<td style='border: solid black 2px;'>" . $row["Proveedor_Foto"]. "</td>";
-				echo "<td style='border: solid black 2px;'>" . $row["Proveedor_Melodia"]. "</td>";
-				echo "<td  style='border: solid black 2px;'><input type='checkbox' name=borrar".$i." value='". $row["Proveedor_ID"]."' /></label></td>";
-				echo "<td  style='border: solid black 2px;'><a href='ModificarN.php?id=".$row["Proveedor_ID"]."'>Modificar</a></td>";
+				echo "<td style='border: solid white 2px;'>" . $row["Proveedor_ID"]. "</td>";
+				echo "<td style='border: solid white 2px;'>" .  $row["Proveedor_Nombre"]. "</td>";
+				echo "<td style='border: solid white 2px;'>" . $row["Proveedor_Direccion"]. "</td>";
+				echo "<td style='border: solid white 2px;'>" . $row["Proveedor_CIF"]. "</td>";
+				echo "<td style='border: solid white 2px;'>" . $row["Proveedor_Persona_Contacto"]. "</td>";
+				echo "<td style='border: solid white 2px;'>" . $row["Proveedor_Telefono"]. "</td>";
+				echo "<td style='border: solid white 2px;'>" . $row["Proveedor_URL"]. "</td>";
+				echo "<td style='border: solid white 2px;'>" . $row["Proveedor_Longitud"]. "</td>";
+				echo "<td style='border: solid white 2px;'>" . $row["Proveedor_Latitud"]. "</td>";
+				echo "<td style='border: solid white 2px;'>" . $row["Proveedor_clave"]. "</td>";
+				echo "<td style='border: solid white 2px;'>" . $row["Proveedor_Email"]. "</td>";
+				echo "<td style='border: solid white 2px;'>" . $row["Proveedor_Foto"]. "</td>";
+				echo "<td style='border: solid white 2px;'>" . $row["Proveedor_Melodia"]. "</td>";
+				echo "<td  style='border: solid white 2px;'><input type='checkbox' name=borrar".$i." value='". $row["Proveedor_ID"]."' /></label></td>";
+				echo "<td  style='border: solid white 2px;'><a href='ModificarN.php?id=".$row["Proveedor_ID"]."'>Modificar</a></td>";
+				echo "<td  style='border: solid white 2px;'><a href='Localizacion.php?id=".$row["Proveedor_ID"]."'> Ver Incidencias</a></td>";
 				echo "</tr>";
 				$i++;
 			}

@@ -70,11 +70,9 @@ if(isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']!="")
 	$nombre_archivo=$_POST['nombre']."_".basename($_FILES["fileToUpload"]["name"]);
 
 	if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"],"./imagenes/".$nombre_archivo)) {
-
-	}else{
-		echo "Ha ocurrido un error con la foto";
+		$set[] = "Proveedor_Foto = '".$nombre_archivo."'";
 	}
-	$set[] = "Proveedor_Foto = '".$nombre_archivo."'";
+	
 
 }
 

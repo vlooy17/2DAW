@@ -18,14 +18,16 @@ echo "<html>";
 echo "<head>";
 echo "	<title>Administrador</title>";
 echo "</head>";
-echo "<body>";
+echo "<body style='margin-left:30px;'>";
 echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
-echo "<h1>Página Administrador</h1>";
+echo "<h1 style='  background-color: #245658 !important;margin-top: 0%;color: white;height: 70px;padding-top:15px;padding-left: 20px;margin-left:-2.5%;'>Página Administrador 
+ <a style=' padding-left: 50%;
+ font-size: 0.7em;'  href='Galeria.php'>Galeria de fotos</a></h1>";
 echo "<h3>Consulta</h3>";
 echo "	<form method='GET' action='ConsultaN.php'>";
-echo "		<table>";
+echo "		<table table style='border: solid white 2px;'>";
 echo "			<tr>";
 echo "				<td>Nombre Proveedor</td>";
 echo "				<td><input type='text' name='proveedor' value='' /></label></td>";
@@ -52,6 +54,7 @@ echo "	</form>";
 
 echo "</body>";
 echo "</html>";
+echo "<a href='AgregarIn.php'><button  class='btn btn-default'>Agregar Incidencia</button></a>";
 echo "<a href='LogOutN.php'><button  class='btn btn-default'>Salir</button></a>";
 
 ?>

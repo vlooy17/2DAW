@@ -37,7 +37,7 @@ if (mysqli_num_rows($result) > 0) {
     }
 } else {
 
-  //  header("Location: https://vlooy17.000webhostapp.com/2DAW/Login/Login1.php?&error=1");
+  header("Location: https://vlooy17.000webhostapp.com/2DAW/Examen/PrimeraPagina.php?error=1");
 }
 
 

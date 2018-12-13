@@ -66,17 +66,6 @@ $re=0;
   if ($er==1) {
     echo "Usted no esta registrado";
   }
-    if ($er==2) {
-    echo "Usuario bloqueado";
-    
-  }
-  if(isset($_GET["Registro"])){
-    $re=$_GET["Registro"];
-  }else{
-
-  }if ($re==1){
-    echo "Revise su corre para confirmar la cuenta";
-  }
 
   ?>
 </div>
