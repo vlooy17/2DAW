@@ -1,0 +1,174 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	4.1.19-community-nt
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema macdonals
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ macdonals;
+USE macdonals;
+
+--
+-- Table structure for table `macdonals`.`bebidas`
+--
+
+DROP TABLE IF EXISTS `bebidas`;
+CREATE TABLE `bebidas` (
+  `id` int(11) NOT NULL auto_increment,
+  `descripcion` varchar(150) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `macdonals`.`bebidas`
+--
+
+/*!40000 ALTER TABLE `bebidas` DISABLE KEYS */;
+INSERT INTO `bebidas` (`id`,`descripcion`) VALUES 
+ (1,'COCACOLA'),
+ (2,'FANTA'),
+ (3,'CERVEZA'),
+ (4,'AGUA');
+/*!40000 ALTER TABLE `bebidas` ENABLE KEYS */;
+
+
+--
+-- Table structure for table `macdonals`.`complementos`
+--
+
+DROP TABLE IF EXISTS `complementos`;
+CREATE TABLE `complementos` (
+  `id` int(11) NOT NULL auto_increment,
+  `descripcion` varchar(150) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `macdonals`.`complementos`
+--
+
+/*!40000 ALTER TABLE `complementos` DISABLE KEYS */;
+INSERT INTO `complementos` (`id`,`descripcion`) VALUES 
+ (1,'CHICKEN BBQ'),
+ (2,'ALITAS DE POLLO'),
+ (3,'HAMBURGUESA CON QUESO'),
+ (4,'HAMBURGUESA'),
+ (5,'McNUGGETS'),
+ (6,'PATATAS DELUXE'),
+ (7,'PATATAS FRITAS'),
+ (8,'ZANAHORIAS'),
+ (9,'HAPPY CHERRITO');
+/*!40000 ALTER TABLE `complementos` ENABLE KEYS */;
+
+
+--
+-- Table structure for table `macdonals`.`ensaladas`
+--
+
+DROP TABLE IF EXISTS `ensaladas`;
+CREATE TABLE `ensaladas` (
+  `id` int(11) NOT NULL auto_increment,
+  `descripcion` varchar(150) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `macdonals`.`ensaladas`
+--
+
+/*!40000 ALTER TABLE `ensaladas` DISABLE KEYS */;
+INSERT INTO `ensaladas` (`id`,`descripcion`) VALUES 
+ (1,'MANHATAN'),
+ (2,'CESAR CON POLLO CISPY'),
+ (3,'MEDITERRANEA CON ATUN'),
+ (4,'Ramas DE LA HUERTA');
+/*!40000 ALTER TABLE `ensaladas` ENABLE KEYS */;
+
+
+--
+-- Table structure for table `macdonals`.`menus`
+--
+
+DROP TABLE IF EXISTS `menus`;
+CREATE TABLE `menus` (
+  `id` int(11) NOT NULL auto_increment,
+  `descripcion` varchar(150) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `macdonals`.`menus`
+--
+
+/*!40000 ALTER TABLE `menus` DISABLE KEYS */;
+INSERT INTO `menus` (`id`,`descripcion`) VALUES 
+ (1,'Mc MENU'),
+ (2,'ENSALADA'),
+ (3,'HAPPY MEAL');
+/*!40000 ALTER TABLE `menus` ENABLE KEYS */;
+
+
+--
+-- Table structure for table `macdonals`.`sandwiches`
+--
+
+DROP TABLE IF EXISTS `sandwiches`;
+CREATE TABLE `sandwiches` (
+  `id` int(11) NOT NULL auto_increment,
+  `descripcion` varchar(150) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `macdonals`.`sandwiches`
+--
+
+/*!40000 ALTER TABLE `sandwiches` DISABLE KEYS */;
+INSERT INTO `sandwiches` (`id`,`descripcion`) VALUES 
+ (1,'CHICKEN CLASSIC-SUPREME'),
+ (2,'MCPOLLO'),
+ (3,'MC BACON'),
+ (4,'BIG MAC');
+/*!40000 ALTER TABLE `sandwiches` ENABLE KEYS */;
+
+
+--
+-- Table structure for table `macdonals`.`usuario`
+--
+
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL auto_increment,
+  `usuario` int(11) NOT NULL default '0',
+  `pass` int(11) NOT NULL default '0',
+  `Nombre` char(45) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 ROW_FORMAT=FIXED;
+
+--
+-- Dumping data for table `macdonals`.`usuario`
+--
+
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
