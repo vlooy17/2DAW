@@ -1,10 +1,11 @@
-window.onload=iniciar;
-function iniciar(){
-    document.getElementById("enviar").addEventListener('click',validar,false);
-    document.getElementById("nombre").addEventListener('blur',convertirMayuscula,false);
-    document.getElementById("apellidos").addEventListener('blur',convertirMayuscula,false);
 
-}
+
+
+
+
+
+
+
 
 /*function enviar() {
     var nombre = document.getElementById("nombre").value.trim();

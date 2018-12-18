@@ -1,0 +1,117 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>DWEC05 - CONT_R22 Validacion de un Formulario</title>
+
+<script type="text/javascript" src="ValidacionFormulario_ITV.js"></script>
+
+<style type="text/css">
+
+label{
+
+	width: 150px;
+
+	float:left;
+
+	margin-bottom:5px;	
+
+}
+
+input,select {
+
+	width:150px;
+
+	float:left;
+
+	margin-bottom:5px;
+
+}
+
+
+
+fieldset{
+
+	background:#CCFF99;
+
+	width:350px;
+
+}
+
+
+
+.error{
+
+	border: solid 2px #FF0000;
+
+
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<fieldset>
+
+    <legend>Formulario de cita de ITV -</legend>
+
+<form name="formulario" id="formulario" action="http://www.google.es" method="get">
+
+  <label for="nombre">Nombre:</label>
+
+  <input type="text" name="nombre" id="nombre" />
+
+  <label for="apellidos">Apellidos:</label>
+
+  <input type="text" name="apellidos" id="apellidos" />
+
+  <label for="nif">NIF:</label>
+
+  <input name="nif" type="text" id="nif"  />
+
+  <label for="matricula">Matrícula Coche:</label>
+
+  <input name="matricula" type="text" id="matricula" value="XXXX AAA" />
+
+   <label for="modelo">Marca Coche:</label>
+
+  <input name="modelo" type="text" id="modelo" value="" />
+
+  <label for="fecha">Fecha de matriculcion:</label>
+
+  <input name="fecha" type="text" id="fecha" value="" />
+
+  <label for="provincia">Provincia:</label>
+
+  <select name="provincia" id="provincia">
+
+    <option value="0" selected="selected">Seleccione Provincia</option>
+
+    <option value="H">Huesca</option>
+
+    <option value="ZA">Zaragoza</option>
+
+    <option value="T">Teruel</option>
+
+  </select>
+
+  <input type="reset" name="limpiar" id="limpiar" value="Limpiar" />
+
+  <input type="submit" name="enviar" id="enviar" value="Enviar" />
+
+</form> 
+
+  
+
+<div id="errores"></div>
+
+</fieldset>
+
+</body>
+
+</html>
