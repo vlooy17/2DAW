@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript">
+        var fila = 0;
+        function iniciar() {
+            nodoTabla = document.getElementById("tabla1");
+            document.getElementById("botoneliminar").disabled = true;
+            document.getElementById("botonaumentar").disabled = true;
+            document.getElementById("botondisminuir").disabled = true;
+            document.getElementById("botonleer").disabled = true;
+
+        }
+        function leerBorde() {
+            nodoTabla = document.getElementById("tabla1");
+            alert("El borde de la tabla es: " + nodoTabla.border);
+        }
+        function agregar() {
+            if (fila < 5) {
+                document.getElementById("botoneliminar").disabled = false;
+                document.getElementById("botonaumentar").disabled = false;
+                document.getElementById("botonleer").disabled = false;
+                var elementoTR = document.createElement('tr');
+                var elementoTD1 = document.createElement('td');
+                var elementoTD2 = document.createElement('td');
+                var elementoTD3 = document.createElement('td');
+
+                var texto1 = document.createTextNode('Fila ' + (fila + 1) + ' Celda 1');
+                var texto2 = document.createTextNode('Fila ' + (fila + 1) + ' Celda 2');
+                var texto3 = document.createTextNode('Fila ' + (fila + 1) + ' Celda 3');
+
+                elementoTD1.appendChild(texto1);
+                elementoTD2.appendChild(texto2);
+                elementoTD3.appendChild(texto3);
+
+                document.getElementById('tabla1').appendChild(elementoTR);
+                document.getElementById('tabla1').appendChild(elementoTD1);
+                document.getElementById('tabla1').appendChild(elementoTD2);
+                document.getElementById('tabla1').appendChild(elementoTD3);
+                fila++
+                if (fila == 5) {
+                    document.getElementById("botonagregar").disabled = true;
+                }
+            }
+        }
+        function eliminar() {
+            if (fila > 0) {
+                document.getElementById("botonagregar").disabled = false;
+                document.getElementById("botonaumentar").disabled = false;
+                document.getElementById("botondisminuir").disabled = false;
+                document.getElementById("botonleer").disabled = false;
+                
+                document.getElementById('tabla1').removeChild(document.getElementById('tabla1').lastChild);
+                document.getElementById('tabla1').removeChild(document.getElementById('tabla1').lastChild);
+                document.getElementById('tabla1').removeChild(document.getElementById('tabla1').lastChild);
+                document.getElementById('tabla1').removeChild(document.getElementById('tabla1').lastChild);
+                fila--
+                if (fila == 0) {
+                    document.getElementById("botoneliminar").disabled = true;
+                    document.getElementById("botonaumentar").disabled = true;
+                    document.getElementById("botondisminuir").disabled = true;
+                    document.getElementById("botonleer").disabled = true;
+                } else {
+                    document.getElementById("botoneliminar").disabled = false;
+                }
+            }
+        }
+        function aumentarBorde() {
+            document.getElementById("botondisminuir").disabled = false;
+            var borde = document.getElementById("tabla1");
+            borde.border++;
+            if (borde.border == 20) {
+                document.getElementById("botonaumentar").disabled = true;
+            }
+        }
+        function reducirBorde() {
+            document.getElementById("botonaumentar").disabled = false;
+            var borde = document.getElementById("tabla1");
+            borde.border--;
+            if (borde.border == 2) {
+                document.getElementById("botondisminuir").disabled = true;
+            }
+        }
+    </script>
+</head>
+
+<body onload="iniciar()">
+    <h1>Operaciones con la tabla</h1>
+    </td>
+    <table id="tabla1" align="center" width="450" border="2">
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td><input type="button" id="botonagregar" value="Agregar fila (MAX 5)" onclick="agregar();"></td>
+            <td><input type="button" id="botoneliminar" value="Eliminar fila" onclick="eliminar();"></td>
+            <td><input type="button" id="botonleer" value="Leer borde" onclick="leerBorde();"></td>
+            <td><input type="button" id="botonaumentar" value="Aumentar Borde" onclick="aumentarBorde();"></td>
+            <td><input type="button" id="botondisminuir" value="Reducir Borde" onclick="reducirBorde();"></td>
+        </tr>
+    </table>
+</body>
+
+</html>

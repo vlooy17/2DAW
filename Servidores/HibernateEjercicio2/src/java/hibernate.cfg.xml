@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sakila?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
+    <mapping resource="Ayudante/Language.hbm.xml"/>
+    <mapping resource="Ayudante/FilmText.hbm.xml"/>
+    <mapping resource="Ayudante/FilmActor.hbm.xml"/>
+    <mapping resource="Ayudante/Store.hbm.xml"/>
+    <mapping resource="Ayudante/Rental.hbm.xml"/>
+    <mapping resource="Ayudante/Category.hbm.xml"/>
+    <mapping resource="Ayudante/Film.hbm.xml"/>
+    <mapping resource="Ayudante/Customer.hbm.xml"/>
+    <mapping resource="Ayudante/Staff.hbm.xml"/>
+    <mapping resource="Ayudante/Country.hbm.xml"/>
+    <mapping resource="Ayudante/Address.hbm.xml"/>
+    <mapping resource="Ayudante/Inventory.hbm.xml"/>
+    <mapping resource="Ayudante/City.hbm.xml"/>
+    <mapping resource="Ayudante/Actor.hbm.xml"/>
+    <mapping resource="Ayudante/Payment.hbm.xml"/>
+    <mapping resource="Ayudante/FilmCategory.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

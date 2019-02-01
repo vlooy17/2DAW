@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script type="text/javascript">
+        id = 0;
+        function agregar() {
+            var patronA = /^([a-zA-Z\s*\Á \É \Í \Ó \Ú]{3,15})$/;
+            var patronN = /^([a-zA-Z\s*\Á \É \Í \Ó \Ú]{3,15})$/;
+            var nombre = document.getElementById("nombre").value;
+            nombre = nombre.toUpperCase();
+            var apellidos = document.getElementById("apellidos").value;
+            apellidos = apellidos.toUpperCase();
+            if (patronA.test(apellidos) && patronN.test(nombre)) {
+
+            
+
+            var elementoTR = document.createElement('tr');
+            elementoTR.setAttribute("id", id);
+            var elementoTD1 = document.createElement('td');
+            var elementoTD2 = document.createElement('td');
+            var elementoTD3 = document.createElement('td');
+            var elementoTD4 = document.createElement('td');
+            var elementoTD5 = document.createElement('td');
+
+            var texto1 = document.createTextNode(id);
+            elementoTD1.appendChild(texto1);
+            var texto2 = document.createTextNode(document.getElementById("nombre").value);
+            elementoTD2.appendChild(texto2);
+            var texto3 = document.createTextNode(document.getElementById("apellidos").value);
+            elementoTD3.appendChild(texto3);
+            var texto4 = document.createTextNode(document.getElementById("curso").value);
+            elementoTD4.appendChild(texto4);
+
+            boton = document.createElement("button");
+            valorTexto = document.createTextNode("Borrar Registro");
+            boton.appendChild(valorTexto);
+            elementoTD5.appendChild(boton);
+            boton.setAttribute("onclick", "eliminarRe(" + id + ")");
+            elementoTR.appendChild(elementoTD1);
+            elementoTR.appendChild(elementoTD2);
+            elementoTR.appendChild(elementoTD3);
+            elementoTR.appendChild(elementoTD4);
+            elementoTR.appendChild(elementoTD5);
+
+            document.getElementById('tabla').appendChild(elementoTR);
+
+
+            id++;
+            }else{
+                alert("Datos Erroneos")
+            }
+        }
+        function eliminarRe(id) {
+            alert("entra");
+            document.getElementById("tabla").removeChild(document.getElementById(id));
+
+        }
+    </script>
+    <style>
+        body {
+            background-color: #008246;
+        }
+
+        h1 {
+            margin-left: 25%;
+            color: white;
+        }
+
+        .capa {
+            float: right;
+            margin-right: 25%;
+            color: white;
+        }
+        .capa2 {
+            float: right;
+            margin-right: 15%;
+            color: white;
+        }
+        .tabla2{
+            table-layout: fixed;
+            width: 700px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>SOLICITUDES ESCOLARIZACIÓN 18/19</h1>
+    <div class="capa">
+        <h3>SOLICITUDES RECIBIDAS</h3>
+        <table>
+            <tr>
+                <td>Nombre:</td>
+                <td>Apellidos:</td>
+                <td>Cuso:</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="nombre"></td>
+                <td><input type="text" id="apellidos"></td>
+                <td><select id="curso">
+                        <option value="1ºEso">Primero Eso</option>
+                        <option value="2ºEso">Segundo Eso</option>
+                        <option value="3ºEso">Tercero Eso</option>
+                        <option value="4ºEso">Cuarto Eso</option>
+                    </select></td>
+                <td><input type="button" value="Añadir solicitud" onclick="agregar();"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="capa2">
+        <h3>SOLICITUDES REGISTRADA</h3>
+        <table class="tabla2" border="2" id="tabla">
+            <tr>
+                <td>IDENTIFICADOR</td>
+                <td>NOMBRE</td>
+                <td>APELLIDOS</td>
+                <td>CURSO</td>
+                <td>BORRAR</td>
+            </tr>
+        </table>
+    </div>
+    <img src="solicitud.gif">
+</body>
+
+</html>

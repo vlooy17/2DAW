@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<respuestas>
+    <mensaje></mensaje>
+    <parametros>
+        <telefono></telefono>
+        <codigo_postal></codigo_postal>
+        <fecha_nacimiento></fecha_nacimiento>
+    </parametros>
+</respuestas>
