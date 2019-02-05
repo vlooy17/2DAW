@@ -4,6 +4,7 @@
     Author     : alumno_2DAW
 --%>
 
+<%@page import="Ayudante.Film"%>
 <%@page import="Ayudante.Customer"%>
 <%@page import="Ayudante.Category"%>
 <%@page import="Ayudante.Ayuda"%>
@@ -124,6 +125,24 @@
         </form>
     </select>
     <br></br>
+
+</div>
+<div>
+    <p style="background-color:#3871AF;color:white;width: 50%;margin-left: 25%;">GESTIÓN DE INVENTARIO:</p>
+    <form method="GET" action="Actores.jsp">
+        Peliculas:<select name="pelis8">
+            <%Ayuda fh7 = new Ayuda();
+                List<Film> store7 = fh7.getFilm2();
+                Film nuevo7 = null;
+                for (int x = 0; x < store7.size(); x++) {
+                    nuevo7 = store7.get(x);
+                    out.println("<option value='" + nuevo7.getFilmId() + "'>" + nuevo7.getTitle() + "</option>");
+                }
+            %>
+            <input type="submit" value="Mostrar" name="M3" />
+    </form>
+</select>
+<br></br>
 
 </div>
 </body>

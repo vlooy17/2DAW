@@ -24,7 +24,7 @@ public class Ayuda {
         this.session = sessionFactory.openSession();
         org.hibernate.Transaction tx = session.beginTransaction();
 
-    }
+    }   
 
     public List<Category> getCategoria() {
         List<Category> Categorias;
@@ -36,6 +36,13 @@ public class Ayuda {
     public List<Film> getFilm(int tramo) {
         List<Film> pelis;
         Query q = session.createQuery("from Film as fi").setFirstResult(tramo).setMaxResults(10);
+        pelis = (List<Film>) q.list();
+        return pelis;
+    }
+    
+    public List<Film> getFilm2() {
+        List<Film> pelis;
+        Query q = session.createQuery("from Film as fi");
         pelis = (List<Film>) q.list();
         return pelis;
     }
@@ -123,5 +130,13 @@ public class Ayuda {
          }
         return total2;
     }
+    
+    public List<Actor> getActores(String idFilm) {
+        List<Actor> actores;
+        Query q = session.createQuery("select fa.actor from FilmActor as fa where fa.film.filmId="+idFilm);
+        actores = (List<Actor>) q.list();
+        return actores;
+    }
 
 }
+ 

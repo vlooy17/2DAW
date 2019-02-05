@@ -35,6 +35,7 @@
             out.println("<th>Titulo Pelicula</th>");
             out.println("<th>Total Alquiladas</th>");
             out.println("</tr>");
+      
             out.println("</thead><tbody>");
             for (int i = 0; i < pelis.size(); i++) {
                 nuevo1 = pelis.get(i);
