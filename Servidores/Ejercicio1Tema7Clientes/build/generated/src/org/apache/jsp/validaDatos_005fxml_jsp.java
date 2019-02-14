@@ -45,13 +45,10 @@ public final class validaDatos_005fxml_jsp extends org.apache.jasper.runtime.Htt
       out.write("\n");
       out.write("\n");
 
-    /*String fecha = request.getParameter("fechaNacimiento");
-    String cos = request.getParameter("codigoPostal");
+    String fecha = request.getParameter("fecha_nacimiento");
+    String cos = request.getParameter("codigo_postal");
     String tel = request.getParameter("telefono");
-    */
-    String fecha = "rewr";
-    String cos = "rhuge";
-    String tel = "gjs";
+    
     
     String datos = "<respuestas><mensaje>Resultado</mensaje>"
             + "<parametros><telefono>"+tel+"</telefono>"
